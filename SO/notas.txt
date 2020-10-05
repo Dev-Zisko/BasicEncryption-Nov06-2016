@@ -1,0 +1,20 @@
+Notas sobre la entrega:
+
+Version 1:
+Para crear el buffer compartido se utilizo el archivo /bin/cat
+-A : se ejecuta ./A_ver1 (int Llave)
+-B: se ejecuta ./B_ver1 (int Llave) (Este elimina el segmento compartido despues de recibir el mensaje)
+
+Version 2:
+No encontramos la forma de pasar la variable que contenia la llave del proceso A al B, debido a la ruta en popen().
+-A: se ejecuta A_ver2 y se ingresan los datos requeridos.
+-B: Es abierto automaticamente por el proceso A.
+
+Version 3:
+En dos ventanas de la terminal:
+-A: Se ejecuta ./A_ver3 (Llave) (ruta archivo fifo).
+-B: Se ejecuta ./B_ver3 (Llave) (ruta archivo fifo).
+
+Version 4:
+-A: Se ejecuta ./A_ver4 (llave) (mensaje) | ./B_ver4 (Llave)
+-B: Tiene como salida el mensaje cifrado y descifrado.
